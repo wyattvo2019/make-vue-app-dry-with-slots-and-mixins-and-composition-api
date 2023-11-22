@@ -22,3 +22,4 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+# make-vue-app-dry-with-slots-and-mixins-and-composition-api
