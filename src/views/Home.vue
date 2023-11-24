@@ -4,6 +4,7 @@
     <div v-for="airport in airports" :key="airport.abbreviation">
       <airport-card :airport="airport" />
     </div>
+    <p>test: {{ airportWithCode }}</p>
   </default-layout>
 </template>
 
@@ -11,6 +12,7 @@
 import allAirports from '@/data/airports.js'
 import AirportCard from '@/components/AirportCard.vue'
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
+import airportMixin from '@/mixins/airport.js'
 
 
 export default {
@@ -18,6 +20,7 @@ export default {
     AirportCard,
     DefaultLayout
   },
+  mixins: [ airportMixin ],
   data() {
     return {
       airports: allAirports
