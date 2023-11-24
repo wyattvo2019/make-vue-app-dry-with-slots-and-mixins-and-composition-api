@@ -1,19 +1,22 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="wrapper">
+  <default-layout class="wrapper">
     <div v-for="airport in airports" :key="airport.abbreviation">
       <airport-card :airport="airport" />
     </div>
-  </div>
+  </default-layout>
 </template>
 
 <script>
 import allAirports from '@/data/airports.js'
 import AirportCard from '@/components/AirportCard.vue'
+import DefaultLayout from '@/layouts/DefaultLayout.vue'
+
 
 export default {
   components: {
-    AirportCard
+    AirportCard,
+    DefaultLayout
   },
   data() {
     return {
@@ -37,8 +40,6 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 1rem;
-  max-width: 960px;
-  margin: 0 auto;
 }
 
 p,
